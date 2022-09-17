@@ -15,7 +15,7 @@ A simple proxy middleware and global rate limiter using Golang and  [ gin ](http
 
 1. Create a Redis host, either in AWS or docker in standalone servers etc, this is for implementing the [ Sliding window based Rate Limiter ](https://www.codementor.io/@arpitbhayani/system-design-sliding-window-based-rate-limiter-157x7sburi)
 
-2. Ensure to change the below variables in main.go as per your requirements.
+2. Ensure to change the below variables in [main.go](https://github.com/neeltom92/ginger/blob/main/main.go) as per your requirements.
 
 | variable  | description |
 | ------------- | ------------- |
