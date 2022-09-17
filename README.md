@@ -4,6 +4,11 @@
 
 A simple proxy middleware and global rate limiter using Go and  [ gin ](https://github.com/gin-gonic/gin) for protection your exposed API's
 
+# Usecase
+
+There will be scenarios where you would need to protect your systems using a rate limiter, althoug many tools are available out there, sharing a simple global rate limiting tool to help protect your rest API from serving too may requests and making the system down.
+
+This is suitable for small scale applications, where you dont need to install additional tools like Kong or Istio Mesh etc for rate limiting and other purposes and avoid the over head of managing and mainting such systems.
 
 ## Installation
 
@@ -43,12 +48,16 @@ go run main.go
 As you can I'm calling this API
 
 ```bash
-curl localhost:8000/api/vehicles/getallmakes
-
-for the endpoint "https://vpic.nhtsa.dot.gov/"
-
-and after 10 calls I started getting 429
+curl localhost:8000/api/vehicles/getallmakes of  the endpoint "https://vpic.nhtsa.dot.gov/"
 ```
+after 10 calls within 60 seconds I started getting 429, as it exceeded the global rate limit I set
+
 
 ![Screenshot](screenshots/rate.png)
 ![Screenshot](screenshots/429.png)
+
+
+
+#Contributing
+- contact on [LinkedIn](https://www.linkedin.com/in/neel-thomas-646a27131/)
+
