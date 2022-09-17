@@ -2,15 +2,40 @@
 
 ![License][license-img]
 
-A simple proxy middleware and global rate limiter using Go and gin for protection your exposed API's
+A simple proxy middleware and global rate limiter using Go and  [ gin ](https://github.com/gin-gonic/gin) for protection your exposed API's
 
 
 ## Installation
 
-Using [Go Modules](https://github.com/golang/go/wiki/Modules)
+1. ensure to change the below variables as per your requirements.
 
 ```bash
-$ go get github.com/ulule/limiter/v3@v3.10.0
+host
+requestCount
+secondsTime
+redisHost
+port
+```
+| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
+
+host:     is the API endpoint to which you want to Proxy pass your requests to.
+requestCount: number of request that is allowed
+secondsTime: time within which the requests will be throttled
+redisHost: redis host, replace "127.0.0.1" with the actual Redis host needed for the throttling.
+port: the port you want the application listen to
+
+- Change the requestCount and secondsTime accordingly, here, I throttle all requests if it cross more than "10 requests within 60 seconds"
+
+2. follow the below steps after the variables has been changed as per your needs.
+
+```bash
+cd ginger
+go mod init main
+go mod tidy
+go run main.go
 ```
 
 ## Usage
