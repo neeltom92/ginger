@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 
-A simple proxy middleware and global rate limiter using Go and  [ gin ](https://github.com/gin-gonic/gin) for protection your exposed API's
+A simple proxy middleware and global rate limiter using Go and  [ gin ](https://github.com/gin-gonic/gin) for protecting your exposed API's
 
 # Usecase
 
