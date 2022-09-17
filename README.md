@@ -34,4 +34,21 @@ go run main.go
 
 ## Demo
 
+1. Installation
+
 ![Screenshot](screenshots/demo.png)
+
+2. Global rate limting demo
+
+As you can I'm calling this API
+
+```bash
+curl localhost:8000/api/vehicles/getallmakes
+
+for the endpoint "https://vpic.nhtsa.dot.gov/"
+
+and after 10 calls I started getting 429
+```
+
+![Screenshot](screenshots/rate.png)
+![Screenshot](screenshots/429.png)
