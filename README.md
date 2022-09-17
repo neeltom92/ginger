@@ -46,7 +46,7 @@ go run main.go
 
 2. Global rate limting demo
 
-As you can I'm calling this API
+As you can see I'm calling this API
 
 ```bash
 curl localhost:8000/api/vehicles/getallmakes of  the endpoint "https://vpic.nhtsa.dot.gov/"
@@ -56,6 +56,8 @@ after 10 calls within 60 seconds I started getting 429, as it exceeded the globa
 
 ![Screenshot](screenshots/rate.png)
 ![Screenshot](screenshots/429.png)
+
+3. For deploying to Kubernetes you can dockerise the app using the code shared and deploy it and make this as your gateway proxy.
 
 
 
