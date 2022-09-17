@@ -63,9 +63,7 @@ func main() {
 			req.URL.Host = remote.Host
 			req.URL.Path = c.Param("proxyPath")
 
-			if req.URL.Path == "/api/vehicles/getallmanufacturers" {
-				fmt.Println(req.URL.Path)
-			}
+
 		}
 		proxy.ServeHTTP(c.Writer, c.Request)
 	})
