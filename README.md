@@ -7,10 +7,6 @@
 
 A simple proxy middleware and global rate limiter using Go and gin for protection your exposed API's
 
-- Simple API
-- "Store" approach for backend
-- Redis support (but not tied too)
-- Middlewares: HTTP, [FastHTTP][6] and [Gin][4]
 
 ## Installation
 
