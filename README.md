@@ -3,13 +3,13 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 
-A simple proxy middleware and global rate limiter using Go and  [ gin ](https://github.com/gin-gonic/gin) for protecting your exposed API's
+A simple proxy middleware and global rate limiter using Go and  [ gin ](https://github.com/gin-gonic/gin) for protecting your exposed API's.
 
 # Usecase
 
-There will be scenarios where you would need to protect your systems using a rate limiter, althoug many tools are available out there, sharing a simple global rate limiting tool to help protect your rest API from serving too may requests and making the system down.
+- There will be scenarios where you would need to protect your systems using a rate limiter, althoug many tools are available out there, but most of the implementation of such systems are complex so sharing a simple global rate limiting tool to help and protect your microservice's rest API from serving too may requests and making the system down.
 
-This is suitable for small scale applications, where you dont need to install additional tools like Kong or Istio Mesh etc for rate limiting and other purposes and avoid the over head of managing and mainting such systems.
+- This is suitable for small scale application that is exposing API's, where you don't need to install additional tools like Kong or Istio Mesh etc for rate limiting and avoid the over head of managing and mainting such systems, you only need to provision a small redis for this set up that's it.
 
 ## Installation
 
