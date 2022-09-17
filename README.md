@@ -59,6 +59,6 @@ after 10 calls within 60 seconds I started getting 429, as it exceeded the globa
 
 
 
-#Contributing
+# Contributing
 - contact on [LinkedIn](https://www.linkedin.com/in/neel-thomas-646a27131/)
 
