@@ -1,11 +1,11 @@
-# Limiter
+# Ginger
 
 [![Documentation][godoc-img]][godoc-url]
 ![License][license-img]
 [![Build Status][circle-img]][circle-url]
 [![Go Report Card][goreport-img]][goreport-url]
 
-_Dead simple rate limit middleware for Go._
+A simple proxy middleware and global rate limiter using Go and gin for protection your exposed API's
 
 - Simple API
 - "Store" approach for backend
