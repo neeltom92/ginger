@@ -30,7 +30,7 @@ func main() {
 
 	*/
 
-	host := "https://vpic.nhtsa.dot.gov/"
+	host := "https://vpic.nhtsa.dot.gov"
 	requestCount := 10
 	const secondsTime = 60
 	redisHost := "127.0.0.1:6379"
