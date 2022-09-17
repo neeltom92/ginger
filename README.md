@@ -7,25 +7,19 @@ A simple proxy middleware and global rate limiter using Go and  [ gin ](https://
 
 ## Installation
 
-1. ensure to change the below variables as per your requirements.
+1. Create a Redis host, either in AWS or docker in standalone servers etc.
 
-```bash
-host
-requestCount
-secondsTime
-redisHost
-port
-```
-| First Header  | Second Header |
+2. ensure to change the below variables as per your requirements.
+
+| variable  | description |
 | ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
+|  host         | the API endpoint to which you want to Proxy pass your requests to  |
+| requestCount  | number of request that is allowed  |
+| secondsTime   | time within which the requests will be throttled  |
+| redisHost     | redis host, replace "127.0.0.1" with the actual Redis host needed for the throttling.    |
+| requestCount  | number of request that is allowed  |
+| port          | the port you want the application listen to  |
 
-host:     is the API endpoint to which you want to Proxy pass your requests to.
-requestCount: number of request that is allowed
-secondsTime: time within which the requests will be throttled
-redisHost: redis host, replace "127.0.0.1" with the actual Redis host needed for the throttling.
-port: the port you want the application listen to
 
 - Change the requestCount and secondsTime accordingly, here, I throttle all requests if it cross more than "10 requests within 60 seconds"
 
