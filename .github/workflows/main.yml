@@ -1,0 +1,19 @@
+name: Renovate
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+jobs:
+  renovate:
+    name: Renovate
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+      - name: Run Renovate
+        uses: docker://renovate/renovate:19.133-slim
+        env:
+          RENOVATE_REPOSITORIES: neeltom92/ginger
+          RENOVATE_TOKEN: ${{ secrets.RENOVATE_TOKEN }}
+          RENOVATE_AUTOMERGE: true # optional, see below
