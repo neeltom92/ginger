@@ -1,1 +1,20 @@
-{}
+{
+  "extends": [
+    "config:base"
+  ],
+  "schedule": [
+    "on monday at 9am"
+  ],
+  "packageRules": [
+    {
+      "packagePatterns": [
+        "github.com/*/*",
+        "gopkg.in/*/*",
+        "google.golang.org/*/*",
+        "golang.org/*/*"
+      ],
+      "groupName": "Golang packages",
+      "reviewers": ["@neeltom92"]
+    }
+  ]
+}
